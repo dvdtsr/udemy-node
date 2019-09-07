@@ -1,0 +1,95 @@
+{
+   "info":{
+      "title":"API REST documentation",
+      "version":"1.0.0",
+      "license":{
+         "name":"ISC"
+      },
+      "description":"Documentation de l'api"
+   },
+   "basePath":"/api/v1",
+   "host":"localhost:8080",
+   "tags":[
+      {
+         "name":"members",
+         "description":"Méthodes permettant de gérer les users"
+      }
+   ],
+   "paths":{
+      "members/{id}":{
+         "get":{
+            "tags":["members"],
+            "summary":"members/{id}",
+            "consumes":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name":"id",
+                  "in":"path",
+                  "required":true
+               }
+            ]
+         },
+         "put":{
+            "tags":["members"],
+            "summary":"members/{id}",
+            "consumes":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name":"id",
+                  "in":"path",
+                  "required":true
+               }
+            ]
+         },
+         "delete":{
+            "tags":["members"],
+            "summary":"members/{id}",
+            "consumes":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name":"id",
+                  "in":"path",
+                  "required":true
+               }
+            ]
+         }
+      },
+      "members":{
+         "get":{
+            "tags":["members"],
+            "summary":"members",
+            "consumes":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name": "max",
+                  "in": "query",
+                  "require": true
+               }
+            ]
+         },
+         "post":{
+            "tags":["members"],
+            "summary":"members",
+            "consumes":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name": "name",
+                  "in": "body",
+                  "require": true
+               }
+            ]
+         }
+      }
+   },
+   "swagger":"2.0"
+}
